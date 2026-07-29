@@ -37,11 +37,11 @@ This project is currently in its initial beta release. Features and stability wi
 
 ## Contributing
 
-Bug reports, feature requests, and pull requests are welcome.
+Bug reports, feature requests, and pull requests are welcome for feature improvements.
 
 ## License
 
-This project is licensed under the GNU General Public License.
+there is no license for this app, because its free and i dont care if you experiment/change it with your own code:)
 
 BootLauncher
 
