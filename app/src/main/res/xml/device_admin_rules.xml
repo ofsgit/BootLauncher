@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device-admin>
+    <uses-policies>
+        <!-- No specific policies needed just to be an admin for startup priority,
+             but we include the tag as it's required. -->
+    </uses-policies>
+</device-admin>
