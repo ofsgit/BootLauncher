@@ -15,7 +15,6 @@ import com.ofs.bootlauncher.databinding.MainactivityBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: MainactivityBinding
-    private val deviceAdminReceiver by lazy { ComponentName(this, MyDeviceAdminReceiver::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,20 +44,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkAndRequestPermissions(autoRequest: Boolean = false) {
-        // 1. Device Admin
-        val dpm = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-        if (!dpm.isAdminActive(deviceAdminReceiver)) {
-            if (autoRequest) {
-                val intent = Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN).apply {
-                    putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, deviceAdminReceiver)
-                    putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "Admin privileges are used to ensure the app can trigger startup events.")
-                }
-                startActivity(intent)
-            }
-            return
-        }
-
-        // 2. Overlay Permission
+        // 1. Overlay Permission
         if (!Settings.canDrawOverlays(this)) {
             if (autoRequest) {
                 val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:$packageName"))
@@ -67,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // 3. Battery Optimization
+        // 2. Battery Optimization
         val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
         if (!pm.isIgnoringBatteryOptimizations(packageName)) {
             if (autoRequest) {
@@ -77,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // 4. Accessibility Service
+        // 3. Accessibility Service
         if (!isAccessibilityServiceEnabled()) {
             if (autoRequest) {
                 val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
@@ -109,15 +95,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updatePermissionStatusText() {
-        val dpm = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
         
-        val isAdminActive = dpm.isAdminActive(deviceAdminReceiver)
         val canOverlay = Settings.canDrawOverlays(this)
         val isIgnoringBattery = pm.isIgnoringBatteryOptimizations(packageName)
         val isAccessibilityEnabled = isAccessibilityServiceEnabled()
 
-        val allGranted = isAdminActive && canOverlay && isIgnoringBattery && isAccessibilityEnabled
+        val allGranted = canOverlay && isIgnoringBattery && isAccessibilityEnabled
         
         binding.contentMain.tvPermissionStatus.apply {
             if (allGranted) {
@@ -125,7 +109,6 @@ class MainActivity : AppCompatActivity() {
                 setTextColor(resources.getColor(android.R.color.holo_green_dark, theme))
             } else {
                 val missing = mutableListOf<String>()
-                if (!isAdminActive) missing.add("Admin")
                 if (!canOverlay) missing.add("Overlay")
                 if (!isIgnoringBattery) missing.add("Battery")
                 if (!isAccessibilityEnabled) missing.add("Accessibility")
