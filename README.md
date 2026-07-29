@@ -43,3 +43,11 @@ Bug reports, feature requests, and pull requests are welcome.
 
 This project is licensed under the GNU General Public License.
 
+BootLauncher
+
+A **ThiRD ParTY System™** application.
+
+BootLauncher behaves like a built-in startup manager,
+without actually being a system app. 😄
+
+All Rights Reserved. "OFS", "OFSbyHQ", "OhefesBeyHeque" as a small devoloper creating quick apps
