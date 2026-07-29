@@ -43,8 +43,8 @@ Bug reports, feature requests, and pull requests are welcome for feature improve
 
 there is no license for this app, because its free and i dont care if you experiment/change it with your own code:)
 
-BootLauncher
-
+# End of ReadME
+**BootLauncher**
 A **ThiRD ParTY System™** application.
 
 BootLauncher behaves like a built-in startup manager,
