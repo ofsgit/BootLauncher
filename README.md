@@ -45,7 +45,7 @@ there is no license for this app, because its free and i dont care if you experi
 
 # End of ReadME
 **BootLauncher**
-A **ThiRD ParTY System™** application.
+A **TRDPTYS (ThiRD ParTY System™)** application.
 
 BootLauncher behaves like a built-in startup manager,
 without actually being a system app. 😄
