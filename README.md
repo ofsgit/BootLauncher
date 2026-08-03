@@ -49,7 +49,7 @@ Bug reports, feature requests, and pull requests are welcome for feature improve
 
 ## License
 
-there is no license for this app, because its free and i dont care if you experiment/change it with your own code:)
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
 
 # End of ReadME
 **BootLauncher**
