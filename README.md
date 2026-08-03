@@ -27,6 +27,14 @@ It is designed for kiosk devices, dedicated tablets, digital signage, and anyone
 
 > **Current Version:** v1.0.0 Beta
 
+Tested on(Android Versions): Android 9.0 (Pie), Android 14 (Upside Down Cake), and Android 16 (Baklava)
+
+Devices:
+* random Evercross Tablet
+* Samsung Galaxy Tab A7 Lite
+* etc
+
+
 This project is currently in its initial beta release. Features and stability will continue to improve over future updates.
 
 ## Roadmap (next version)
@@ -50,4 +58,4 @@ A **TRDPTYS (ThiRD ParTY System™)** application.
 BootLauncher behaves like a built-in startup manager,
 without actually being a system app. 😄
 
-All Rights Reserved. "OFS", "OFSbyHQ", "OhefesBeyHeque" as a small devoloper creating quick apps
+All Rights Reserved. "OFS", "OFSbyHQ", "OhefesBeyHeque" as a small devoloper creating useful apps
