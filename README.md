@@ -32,6 +32,7 @@ Tested on(Android Versions): Android 9.0 (Pie), Android 14 (Upside Down Cake), a
 Devices:
 * random Evercross Tablet
 * Samsung Galaxy Tab A7 Lite
+* Lenovo Tab 7 Essential
 * etc
 
 
@@ -59,3 +60,9 @@ BootLauncher behaves like a built-in startup manager,
 without actually being a system app. 😄
 
 All Rights Reserved. "OFS", "OFSbyHQ", "OhefesBeyHeque" as a small devoloper creating useful apps
+---
+Disclaimer
+
+This app is not affiliated with, endorsed by, sponsored by, or associated with Google, Samsung, Evercoss, or Lenovo.
+
+The devices and brands mentioned above are included solely because they are devices used for testing and compatibility purposes.
