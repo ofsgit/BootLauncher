@@ -30,7 +30,7 @@ It is designed for kiosk devices, dedicated tablets, digital signage, and anyone
 Tested on(Android Versions): Android 9.0 (Pie), Android 14 (Upside Down Cake), and Android 16 (Baklava)
 
 Devices:
-* random Evercross Tablet
+* random Evercoss Tablet
 * Samsung Galaxy Tab A7 Lite
 * Lenovo Tab 7 Essential
 * etc
